@@ -1,0 +1,24 @@
+server:
+  address:  127.0.0.1
+  port: 8099
+spring:
+# ����mysql���ݿ⣬springbootdemodatΪ�ҵ����ݿ�����
+  datasource:
+    url: jdbc:mysql://39.99.130.241:3506/anti-fraud?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+    username: xajs
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+# ����thymeleaf��������templates�ļ����·�html�ļ�
+  thymeleaf:
+    prefix: classpath:/templates/
+    check-template-location: true
+    suffix: .html
+    mode: HTML
+    encoding: UTF-8
+    cache: false
+
+# spring����Mybatis����
+# ����Mybatisӳ���ļ�
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
